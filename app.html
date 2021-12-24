@@ -6,34 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Ping Pong Scorekeeper</title>
 </head>
 
 <body>
-    <h1>Ping Pong Scorekeeper</h1>
-    <div>
-        <span id="playerOneScoreSpan">0</span> to <span id="playerTwoScoreSpan">0</span>
-    </div>
-    <div>
-        <p>Use the buttons below to keep score.</p>
-    </div>
-    <div>
-        <label for="winningPointsSelect">Playing To:</label>
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <div class="card-header">
+                    <div class="card-image has-text-centered">
+                        <figure class="image is-4x3 is-inline-block">
+                            <img src="pingPong.jpg" alt="Ping pong paddles lay on a ping pong table.">
+                        </figure>
+                    </div>
+                </div>
+                <div class="card-content">
 
-        <select name="winningPoints" id="winningPointsSelect">
-            <option value="10">10</option>
-            <option value="9">9</option>
-            <option value="8">8</option>
-            <option value="7">7</option>
-            <option value="6">6</option>
-            <option value="5">5</option>
-        </select>
+
+                    <div class="title is-one">
+                        <span id="playerOneScoreSpan">0</span> to <span id="playerTwoScoreSpan">0</span>
+                    </div>
+                    <div class="subtitle">
+                        <p>Use the buttons below to keep score.</p>
+                    </div>
+                    <div>
+                        <label for="winningPointsSelect" class="label is-large is-inline">Playing To:</label>
+                        <div class="select is-rounded">
+                            <select name="winningPoints" id="winningPointsSelect">
+                                <option value="10">10</option>
+                                <option value="9">9</option>
+                                <option value="8">8</option>
+                                <option value="7">7</option>
+                                <option value="6">6</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="button is-primary card-footer-item is-large" id="playerOnePointButton">+1 to
+                            Player 1</button>
+                        <button class="button is-link card-footer-item is-large" id="playerTwoPointButton">+1 to Player
+                            2</button>
+                        <button class="button is-danger card-footer-item is-large" id="resetButton">Reset</button>
+                    </footer>
+
+
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <button id="playerOnePointButton">+1 to Player 1</button>
-        <button id="playerTwoPointButton">+1 to Player 2</button>
-        <button id="resetButton">Reset</button>
-    </div>
+
     <script type="text/javascript" src="src/pingPongGame.js"></script>
     <script type="text/javascript" src="src/app.js"></script>
 </body>
