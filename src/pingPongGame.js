@@ -60,7 +60,7 @@ class PingPongGame {
     }
 
     calculateIsGameWon() {
-        if (this._playerOneScore == this._winningPoints || this._playerTwoScore == this._winningPoints) {
+        if (this._playerOneScore >= this._winningPoints || this._playerTwoScore >= this._winningPoints) {
             this._isGameWon = true;
         } else {
             this._isGameWon = false;

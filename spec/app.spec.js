@@ -36,5 +36,9 @@ xdescribe("When the reset button is pressed", function () {
         document.querySelector("#resetButton").click();
         expect(PingPongGame.resetGame()).toHaveBeenCalled();
     });
+    it("should reset the value of winningPoints.", function () {
+        let newPingPongGame = new PingPongGame(10);
+        expect(newPingPongGame.winningPoints).toBe(10);
+    });
 });
 
